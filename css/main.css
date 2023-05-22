@@ -279,7 +279,6 @@ a.link{
 .hero-section .text{
     gap: 20px;
     margin-top: 20vh;
-    /*animation: fadeInLeft 2s linear forwards;*/
 }
 .text p.hero-parag{
     max-width: 490px;
@@ -288,13 +287,14 @@ a.link{
     top: 100px;
     left: 0px;
     z-index: 10;
-    /*animation: moverUpDown 2s infinite alternate;*/
+    animation: moverUpDown 2s infinite alternate;
+    animation-delay: 2s;
 }
 .img2{
     z-index: 10;
     top: 120px;
     right: 19%;
-    /*animation: mvRight 4s ease-in-out infinite;*/
+    animation: mvRight 4s ease-in-out infinite;
 }
 .img3{
     top: 25%;
@@ -322,11 +322,14 @@ a.link{
     left: 50%;
     bottom: 5%;
     transform: translateX(-50%);
-    /*animation: moverUDown 3s infinite alternate;*/
+    animation: moverUDown 4s infinite ease-in-out;
 }
 .sticky-notes-img{
     right: 5%;
     top: 42%;
+}
+.img3, .img4, .img5, .sticky-notes-img{
+    animation: mvRight 4s ease-in-out infinite;
 }
 /* PROFILE SECTION */
 .profile-section{
@@ -355,10 +358,9 @@ a.link{
     border-bottom: 1px solid rgba(28, 17, 22, 0.1) ;
     width: fit-content;
     gap: 30px;
-    animation: fadeInUp 2s linear forwards;
 }
 .profile-section a.btn{
-    animation: fadeInUp 2s linear forwards;
+    margin: auto;
 }
 .y-circle{
     top: 55px;
@@ -398,6 +400,7 @@ a.link{
     bottom: 145px;
     left: 35px;
     animation: w-bullet-mv 3s infinite ease-in-out;
+    animation-delay: 2s;
 }
 .black-blue-circle{
     left: 0;
@@ -408,7 +411,8 @@ a.link{
     top: -50px;
     left: 135px;
     opacity: 0.5;
-    animation: moverDownup 2s infinite alternate;
+    animation: moverDownup 3s infinite alternate;
+    animation-delay: 2s;
 
 }
 .features-section .boxs{
@@ -430,8 +434,8 @@ a.link{
     left: 400px;
 }
 .about-us .yell-bul{
-    animation: fadeInUp 2s linear forwards;
     animation: moverUpDown 2s infinite alternate;
+    animation-delay: 2s;
 }
 .yell-bul::before{
     position: absolute;
@@ -454,24 +458,11 @@ a.link{
 .watch-text{
     padding-bottom: 40px;
     padding-top: 20px;
-    animation: fadeIn 2s linear forwards;
 }
 .video{
     min-width: 100%;
     min-height:90%;
     overflow: hidden;
-}
-.video::before{
-    content: " ";
-    position: absolute;
-    background: linear-gradient(90.29deg, #90F7EC 0.41%, #32CCBC 51.17%, #32CCBC 68.78%);
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-height: 100%;
-    opacity: 20%;
-    height:100%;
-    z-index:3;
 }
 .video > img{
     width: 100%;
@@ -491,13 +482,21 @@ a.link{
     cursor:pointer;
     transform: translate(-50%, -50%);
     z-index:10;
-    animation: fadeIn 2s linear forwards;
 }
 /* ABOUT US SECTION */
 .about-us{
-    background-color: var(--primary-color);
+    background-color: var(--text-light-color);
     padding-top: 120px;
     padding-bottom: 220px;
+    animation: bg-animate 2s ease-in-out forwards;
+}
+@keyframes bg-animate {
+    0%{
+        background-color: var(--text-light-color);
+    }
+    100%{
+        background-color: var(--primary-color);
+    }
 }
 .about-us .text{
     animation: fadeInLeft 2s linear forwards;
@@ -569,15 +568,40 @@ a.link{
     color: var(--text-head-dark-color);
 }
 .w-circle-about{
-    top: 10px;
+    bottom: 140px;
+    left: 230px;
+    animation: mToLeftTop 2s linear ease-in-out;
+    animation: mDownUp 2s infinite ease-in-out;
+    animation-delay: 2s;
 }
+@keyframes mToLeftTop {
+    0%{
+        bottom: 140px;
+        left: 230px;
+    }
+    100%{
+    transform: translate(-220px, -480px);
+    }
+}
+@keyframes mDownUp {
+    0%{
+    transform: translate(-220px, -480px);
+    }
+    50%{
+        transform: translate(-110px, -365px);
+    }
+    100%{
+        transform: translate(-220px, -480px);
+    }
+}
+
 .aqua-bullet{
     top: 50px;
     right: 10px;
 }
 .w-big-cir{
     top: 65%;
-    right: -20px;
+    right: -95px;
     animation: moverUpDown 2s infinite alternate;
 }
 .about-us::after{
@@ -614,18 +638,32 @@ a.link{
 .circle-about-y{
     top: 30px;
     right: 60px;
+    animation: animate-c-a-y 2s ease-in-out infinite;
+}
+@keyframes animate-c-a-y {
+    50%{
+        transform: translateX(-60px);
+    }
 }
 .about-full-w-sircle{
     bottom: 20px;
-    right: 20px;
+    right: 40px;
+    animation: a-f-w-c-animate 2s infinite ease-in-out;
+}
+@keyframes a-f-w-c-animate {
+    50%{
+        transform: translate(30px, -35px);
+    }
 }
 .aqua-bullet{
-    left: -45px;
-    top: 348px;
+    left: 60px;
+    top: 390px;
+    animation: moverUpDown 2s alternate infinite;
 }
 .about-ora-circle{
     bottom: -210px;
-    left: 0;
+    left: 10px;
+    animation: moverDownup 2s alternate infinite;
 }
 /*SERVICE SECTION */
 section.services{
@@ -672,10 +710,16 @@ section.services{
     right: 0;
     bottom: -155px;
     z-index: 10;
+    animation:mvToInner 2s ease-in-out infinite;
 }
 .team-yello-cir{
     right: 5px;
     top: 30%;
+    animation:mvToInner 2s ease-in-out infinite;
+}
+.team-aqua-bullet{
+    left: 90px;
+    animation:mvToInner 2s ease-in-out infinite;
 }
 .our-team .title{
     bottom: -90px;
@@ -764,24 +808,27 @@ section.services{
 .contact .gred-circle{
     top: 36%;
     left: 30px;
+    animation: gred-circle-animate 2s ease-in-out infinite;
+}
+@keyframes gred-circle-animate {
+    50%{
+        transform: translate(125px, 0px);
+    }
 }
 .contact .yel-cont-cir{
     left: 60%;
     bottom: -30px;
+    animation: yel-cont-cir-animate 2s ease-in-out infinite;
 }
 .contact .conta-aqua-bullet{
-    top: 115px;
-    left: 160px;
+    top: 160px;
+    left: 242px;
+    animation:mvToInner 2s ease-in-out infinite;
 }
 .contact .conta-about-ora-circle{
-    top: 0;
-}
-.contact .conta-aqua-bullet{
-    top: 115px;
-    left: 160px;
-}
-.contact .conta-about-ora-circle{
-    top: 0;
+    top: 40px;
+    left: 90px;
+    animation:mvToInner 2s ease-in-out infinite;
 }
 @keyframes team-y-c-animate {
     50%{
@@ -806,7 +853,6 @@ section.services{
 }
 .footer .text{
     margin-top: 0;
-    animation: fadeInLeft 2s linear forwards;
 }
 .footer .text .heading{
     font-family: 'Playfair Display', serif;
@@ -1169,14 +1215,6 @@ section.services{
         font-size: 13px;
     }
 }
-@keyframes fadeInLeft {
-	from {
-		transform: translate3d(-900px,0 , 0);
-	}
-	to {
-		transform: translate3d(0, 0, 0);
-	}
-}
 @-webkit-keyframes moverUpDown {
     0% { transform: translateY(0); }
     100% { transform: translateY(-40px); }
@@ -1195,35 +1233,10 @@ section.services{
 }
   @keyframes mvRight {
     50%{
-        transform: translateX(100px);
+        transform: translateX(60px);
     }
 }
-@keyframes fadeIn{
-	from {
-		transform: translate3d(0, -100%, 0);
-	}
-	to {
-		transform: translate3d(0, 0, 0);
-	}
-}
-@keyframes fadeI{
-	from {
-		transform: translate3d(0, -30%, 0);
-	}
-	to {
-		transform: translate3d(0, 0, 0);
-	}
-}
-@keyframes fadeInUp {
-    from {
-        transform: translate3d(0,60px,0)
-    }
 
-    to {
-        transform: translate3d(0,0,0);
-        opacity: 1
-    }
-}
 @keyframes mvDownLeft {
     50% {
         transform: translate(-40px, 40px);
