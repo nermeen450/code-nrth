@@ -397,14 +397,13 @@ a.link{
     left: 0;
 }
 .w-bullet{
-    bottom: 145px;
-    left: 35px;
+    bottom: 150px;
+    left: 30px;
     animation: w-bullet-mv 3s infinite ease-in-out;
-    animation-delay: 2s;
 }
 .black-blue-circle{
     left: 0;
-    bottom: 0;
+    bottom: 5px;
     animation: mvToInner 3s infinite ease-in-out;
 }
 .orange-circle{
