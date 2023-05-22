@@ -8,13 +8,14 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <!--HERO SECTION-->
     <section class="hero-section position-relative py-3 px-xl-5">
         <div class="container-fluid position-relative">
-            <nav class="navbar navbar-expand-lg">
+            <nav data-aos="fade-down"data-aos-easing="linear"data-aos-duration="1500" class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">CodeNorth</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +43,7 @@
                   </div>
                 </div>
             </nav>
-            <div class="text d-flex flex-column text-center text-lg-start">
+            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="text d-flex flex-column text-center text-lg-start">
                 <div class="biggest-heading">The Right partner choice</div>
                 <p class="hero-parag">
                     Strategy, design, messaging, UI, and prototyping for a
@@ -219,30 +220,50 @@
       <img class="w-big-cir position-absolute d-none d-xl-block" src="img/w-big-cir.svg" alt="">
       <img class="about-ora-circle position-absolute d-none d-xl-block" src="img/about-ora-circle.svg" alt="">
     </section>
-        <!--SERVICES SECTION-->
-        <section class="services px-xl-5">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-6">
-                <p class="p-box text-uppercase">know more</p>
-                <h2>we provide the<br> best services</h2>
-              </div>
-              <div class="col-lg-6">
-                <p class="p-box pt-5">with our focus on providing the highest quality service, we strive to exceed expectations and deliver unparalleled support to our clients  </p>
-                <a href="">
-                  <span>discover more</span>
-                  <span class="icon ms-1">
-                    <i class="fa-solid fa-arrow-right"></i>
-                  </span>
-                </a>
-              </div>
-              <div class="col-lg-6">
-    
-              </div>
-            </div>
+    <!--SERVICES SECTION-->
+    <section class="services px-xl-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-5 box">
+            <p class="p-box text-uppercase">know more</p>
+            <div class="section-heading">we provide the<br> best services</div>
           </div>
-        </section>
-           <!--TEAM SEACTION-->
+          <div class="col-12 col-lg-6 mb-5 box d-flex flex-column justify-content-center">
+            <p class="hero-parag">
+              Experience our unparalleled commitment to providing exceptional service and support to our clients by exploring our "Best Service" section, where we showcase our dedication to going above and beyond expectations.
+            </p>
+            <a href="#" class="btn">Request Quote</a>
+          </div>
+          <div class="col-12 col-lg-6 box mb-5">
+            <img src="img/pManager.svg" alt="">
+            <h4>Product Management</h4>
+            <p class="hero-parag">
+              With our focus on providing the highest quality service, we strive to exceed expectations and deliver unparalleled support to our clients.
+            </p>
+          </div>
+          <div class="col-12 col-lg-6 box color mb-5">
+            <img src="img/software-develop.svg" alt="">
+            <h4>Software developement</h4>
+            <p>With our focus on providing the highest quality service, we strive to exceed expectations and deliver unparalleled support to our clients.</p>
+          </div>
+          <div class="col-12 col-lg-6 box mb-5">
+            <img src="img/sDevelo.svg" alt="">
+            <h4>Android Developement</h4>
+            <p class="hero-parag">
+              With our focus on providing the highest quality service, we strive to exceed expectations and deliver unparalleled support to our clients.
+            </p>
+          </div>
+          <div class="col-12 col-lg-6 box mb-5">
+            <img src="img/iosDevelo.svg" alt="">
+            <h4>Ios Development</h4>
+            <p class="hero-parag">
+              With our focus on providing the highest quality service, we strive to exceed expectations and deliver unparalleled support to our clients.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--TEAM SEACTION-->
     <section class="our-team position-relative px-xl-5">
       <div class="container-fluid">
         <div class="team-text position-absolute text-xl-start">
@@ -265,12 +286,11 @@
         </div>
       </div>
       <img class="pc position-absolute d-none d-xl-block" src="img/pc.svg" alt="">
-      <img class="bold-circle position-absolute d-none d-xl-block" src="img/bold-circle.svg" alt="">
       <img class="team-yello-cir position-absolute d-none d-xl-block" src="img/team-yello-cir.svg" alt="">
       <img class="team-aqua-bullet position-absolute d-none d-xl-block" src="img/aqua-bullet.svg" alt="">
       <div class="title position-absolute d-none d-xxl-block">CodeNorth</div>
     </section>
-        <!--TREAT SECTION-->
+        <!--TREAT SECTION
         <section class="treat d-flex justify-content-center position-relative">
           <div class="treat-text text-center">
             <p class="small-title">partner in success</p>
@@ -289,7 +309,8 @@
             </div>
           </div>
         </section>
-            <!--SOCIAL SECTION-->
+        -->
+            <!--SOCIAL SECTION
     <section class="social position-relative px-xl-5">
       <img class="div-social-img position-absolute d-none d-xl-block" src="img/div.svg" alt="">
       <div class="container-fluid">
@@ -353,7 +374,54 @@
         </div>
       </div>
     </section>
-        <!--FOOTER SECTION-->
+    -->
+        <!--CONTACT SECTION-->
+        <section class="contact position-relative">
+          <div class="container-fluid">
+            <div class="row d-flex justify-content-between">
+              <div class="col-12 col-lg-5 contact-text">
+                <div class="text-heading">CodeNorth</div>
+                <div class="text-head">Have a Project Let’s Discuss</div>
+                <p>At Code North, we're dedicated to helping startups achieve their goals through top-quality tech solutions. Contact us today to discuss your project and discover how we can bring your vision to life.</p>
+              </div>
+              <div class="col-12 col-lg-6 contact-form py-3 px-2">
+                <form action="">
+                  <div class="d-flex justify-content-between mb-3">
+                    <div class="name">
+                      <label>Full Name</label>
+                      <input class="form-control" type="text" placeholder="Enter your username..">
+                    </div>
+                    <div class="number">
+                      <label>Phone Number</label>
+                      <input class="form-control" type="text" placeholder="0100000000000">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your email..">
+                  </div>
+                  <label>Project type</label>
+                  <select class="form-select mb-3" aria-label="Default select example">
+                    <option selected>Choose here</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Project description</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter Here" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn w-100">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <img src="img/gred-circle.svg" class="gred-circle d-none d-xl-block position-absolute img-fluid" alt="">
+          <img src="img/yel-cont-cir.svg" class="yel-cont-cir d-none d-xl-block position-absolute img-fluid" alt="">
+          <img class="conta-about-ora-circle position-absolute d-none d-xl-block" src="img/circle-about-y.svg" alt="">
+          <img class="conta-aqua-bullet position-absolute d-none d-xl-block" src="img/aqua-bullet.svg" alt="">
+        </section>
+         <!--FOOTER SECTION-->
         <section class="footer px-xl-5">
           <div class="container-fluid">
             <div class="row py-5">
@@ -361,7 +429,7 @@
                 <div class="heading">CodeNorth</div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
               </div>
-              <div class="col-12 col-xl-5 details">
+              <div class="col-12 col-xl-5 details" data-aos="fade-left">
                 <div>Have a project let’s discuss</div>
                 <form action="" class="position-relative">
                   <input class="form-control" type="text" placeholder="Enter your email">
@@ -374,11 +442,11 @@
                   <li><a href="#">Contact us</a></li>
                 </ul>
               </div>
-              <div class="col-12 col-xl-3 pb-1 d-flex align-items-end justify-content-start justify-content-xl-center">
+              <div data-aos="fade-left" class="col-12 col-xl-3 pb-1 d-flex align-items-end justify-content-start justify-content-xl-center">
                 <img class="in-img" src="img/in.svg" alt="">
               </div>
             </div>
-            <div class="row copy-right py-4">
+            <div data-aos="fade-up" class="row copy-right py-4">
               <div class="col-12 col-xl-4 mt-2">
                 &copy;2023 CodeNorth. all right reserved
               </div>
@@ -390,6 +458,9 @@
         </section>
     <script src="js/all.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/countrypicker.js"></script>
+
     <script src="js/main.js"></script>
 </body>
 </html>

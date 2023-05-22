@@ -23,6 +23,7 @@ a{
     --text-small-head-dark-color: rgba(19, 33, 59, 0.6);
     --text-item-head-dark-color:rgba(16, 22, 45, 1);
     --text-light-color:rgba(255, 255, 255, 1);
+    --border-color:rgba(223, 232, 246, 1);
 }
 body{
     overflow-x: hidden;
@@ -230,9 +231,6 @@ a.link{
     min-height: inherit;
   
 }
-.navbar{
-    animation: fadeIn 2s linear forwards;
-}
 .navbar .navbar-brand{
     font-size: 40px;
     color: var(--main-color);
@@ -281,7 +279,7 @@ a.link{
 .hero-section .text{
     gap: 20px;
     margin-top: 20vh;
-    animation: fadeInLeft 2s linear forwards;
+    /*animation: fadeInLeft 2s linear forwards;*/
 }
 .text p.hero-parag{
     max-width: 490px;
@@ -290,13 +288,13 @@ a.link{
     top: 100px;
     left: 0px;
     z-index: 10;
-    animation: moverUpDown 2s infinite alternate;
+    /*animation: moverUpDown 2s infinite alternate;*/
 }
 .img2{
     z-index: 10;
     top: 120px;
     right: 19%;
-    animation: mvRight 4s ease-in-out infinite;
+    /*animation: mvRight 4s ease-in-out infinite;*/
 }
 .img3{
     top: 25%;
@@ -324,20 +322,16 @@ a.link{
     left: 50%;
     bottom: 5%;
     transform: translateX(-50%);
-    animation: moverUDown 3s infinite alternate;
+    /*animation: moverUDown 3s infinite alternate;*/
 }
 .sticky-notes-img{
     right: 5%;
     top: 42%;
 }
-.img3, .img4, .img5, .sticky-notes-img{
-    animation: move 3s ease-in-out infinite;
-}
 /* PROFILE SECTION */
 .profile-section{
     padding-top: 80px;
     padding-bottom: 120px;
-  
 }
 .profile-section .text{
     animation: fadeI 2s linear forwards;
@@ -679,11 +673,6 @@ section.services{
     bottom: -155px;
     z-index: 10;
 }
-.bold-circle{
-    bottom: -334px;
-    left: -15px;
-    z-index: -1;
-}
 .team-yello-cir{
     right: 5px;
     top: 30%;
@@ -691,95 +680,123 @@ section.services{
 .our-team .title{
     bottom: -90px;
 }
-/*TREAT SECTION */
-.treat{
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-.treat-text{
-    max-width: 700px;
-}
-.treat-text .section-heading{
-    color: var(--text-alt-dark-color);
-}
-.treat-text p:nth-last-of-type(2){
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: 0.05em;
-    color: var(--text-dark-color);
-}
-.treat .slider{
-    background-color: rgba(248, 243, 243, 1);
-}
-.treat .back,
-.treat .forward{
-    color: var(--text-light-color);
-}
-.treat-orang-circle{
-    position: absolute;
-    right: -70px;
-    bottom: 0;
-}
-/*SOCIAL SECTION*/
-.social{
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
-.div-social-img{
-    z-index: -1;
-    top: 33%;
-    left: 0;
-}
-.social-box{
-    width: 111px;
-    height: 111px;
-    border-radius: 50%;
-    background-color: var(--text-light-color);
-    box-shadow: 0px 40px 100px 0px rgba(37, 73, 69, 0.1);
-    transition: all 0.5s ease-in-out;
-    margin-bottom: 20px;
-}
-.social-box.facebook{
-    width: 128px;
-    height: 128px;
-}
-.social-box.gmail{
-    width: 140px;
-    height: 140px;
-}
-.social-box.behance{
-    width: 120px;
-    height: 120px;
-}
-.social-box.microsoft{
-    width: 130px;
-    height: 130px;
-}
-.social-box.oo{
-    width: 90px;
-    height: 90px;
-}
-.project-box{
-    background: linear-gradient(90.26deg,#6DE7DA  0.36%,#32CCBC 39.41%, #32CCBC  73.16%, #3A6B66 90.9%);
-    color: var(--text-light-color);
-    border-radius: 20px;
 
+/*CONTACT SECTION*/
+.contact{
+    padding-top: 180px;
+    padding-bottom: 70px;
+    margin-bottom: 100px;
 }
-.project-box .heading{
+.contact .container-fluid{
+    background: linear-gradient(90.26deg, #3A6B66 0.36%, #32CCBC 39.41%, #32CCBC 73.16%, #6DE7DA 90.9%);
+    max-width: 80%;
+    margin: auto;
+    border-radius: 20px;
+}
+.contact .contact-text{
+    color: var(--text-light-color);
+    margin: auto;
+}
+.contact .text-heading{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    margin: 40px 0;
     font-family: 'Playfair Display', serif;
+}
+.contact .text-head{
     font-size: 45px;
     font-weight: 700;
     line-height: 60px;
     letter-spacing: 0em;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
 }
-.project-box .heading + span{
+.contact p{
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
-    display: block;
-    margin-top: 20px;
     letter-spacing: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+.contact form{
+    background-color: var(--text-light-color);
+    padding: 26px 19px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif !important;
+    margin: 20px 30px;
+}
+
+.contact input, .contact select{
+    height: 47px;
+}
+.contact input, .contact select,
+.contact textarea{
+    padding: 12px 20px;
+    border: 1px solid var(--border-color);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    resize: none;
+}
+.contact .form-control::placeholder,
+.contact select{
+    color: rgba(132, 143, 172, 1)!important ;
+}
+.contact .name, .contact .number{
+    max-width: 49%;
+}
+.contact label{
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    color: rgba(16, 22, 45, 1);
+    margin-bottom: 0.5rem;
+}
+.contact button[type=submit]{
+    background-color: var(--main-color);
+    color: var(--text-light-color);
+}
+.contact .gred-circle{
+    top: 36%;
+    left: 30px;
+}
+.contact .yel-cont-cir{
+    left: 60%;
+    bottom: -30px;
+}
+.contact .conta-aqua-bullet{
+    top: 115px;
+    left: 160px;
+}
+.contact .conta-about-ora-circle{
+    top: 0;
+}
+.contact .conta-aqua-bullet{
+    top: 115px;
+    left: 160px;
+}
+.contact .conta-about-ora-circle{
+    top: 0;
+}
+@keyframes team-y-c-animate {
+    50%{
+        transform: translate(-35px, -15px);
+    }
+}
+@keyframes gred-circle-animate {
+    50%{
+        transform: translate(125px, 0px);
+    }
+}
+@keyframes yel-cont-cir-animate {
+    50%{
+        transform: translateY(-90px);
+    }
 }
 /*FOOTER SECTION */
 .footer{
@@ -804,19 +821,6 @@ section.services{
     font-weight: 300;
     line-height: 27px;
     letter-spacing: 0em;  
-}
-.footer .details,
-.footer .in-img{
-    animation: fadeInRight 2s linear forwards;
-}
-@keyframes fadeInRight{
-    from {
-      opacity: 0;
-      transform: translateX(900px);
-    }
-    to {
-      opacity: 1;
-    }
 }
 .footer .details div {
     font-family: 'Montserrat', sans-serif;
@@ -940,6 +944,9 @@ section.services{
     }
     .treat p:not(.small-title){
         padding: 15px;
+    }
+    .services p.hero-parag{
+        color: var(--text-alt-dark-color);
     }
 }
 @media (min-width:768px) and (max-width:1200px) {
@@ -1247,3 +1254,116 @@ section.services{
         transform: translate(-18px, 6px)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*TREAT SECTION 
+.treat{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.treat-text{
+    max-width: 700px;
+}
+.treat-text .section-heading{
+    color: var(--text-alt-dark-color);
+}
+.treat-text p:nth-last-of-type(2){
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: var(--text-dark-color);
+}
+.treat .slider{
+    background-color: rgba(248, 243, 243, 1);
+}
+.treat .back,
+.treat .forward{
+    color: var(--text-light-color);
+}
+.treat-orang-circle{
+    position: absolute;
+    right: -70px;
+    bottom: 0;
+}
+*/
+/*SOCIAL SECTION
+.social{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.div-social-img{
+    z-index: -1;
+    top: 33%;
+    left: 0;
+}
+.social-box{
+    width: 111px;
+    height: 111px;
+    border-radius: 50%;
+    background-color: var(--text-light-color);
+    box-shadow: 0px 40px 100px 0px rgba(37, 73, 69, 0.1);
+    transition: all 0.5s ease-in-out;
+    margin-bottom: 20px;
+}
+.social-box.facebook{
+    width: 128px;
+    height: 128px;
+}
+.social-box.gmail{
+    width: 140px;
+    height: 140px;
+}
+.social-box.behance{
+    width: 120px;
+    height: 120px;
+}
+.social-box.microsoft{
+    width: 130px;
+    height: 130px;
+}
+.social-box.oo{
+    width: 90px;
+    height: 90px;
+}
+.project-box{
+    background: linear-gradient(90.26deg,#6DE7DA  0.36%,#32CCBC 39.41%, #32CCBC  73.16%, #3A6B66 90.9%);
+    color: var(--text-light-color);
+    border-radius: 20px;
+
+}
+.project-box .heading{
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 0em;
+}
+.project-box .heading + span{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    display: block;
+    margin-top: 20px;
+    letter-spacing: 0px;
+}
+*/
